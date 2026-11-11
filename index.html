@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Security Checker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+
+    <main class="container">
+
+        <div class="icon-box">
+            <span>🔐</span>
+        </div>
+
+        <div class="heading">
+            <h1>Password Security Checker</h1>
+            <p class="subtitle">
+                Check how secure your password is
+            </p>
+        </div>
+
+        <div class="input-section">
+            <label for="password">Enter Your Password</label>
+
+            <div class="input-box">
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Enter your password"
+                    autocomplete="new-password"
+                >
+
+                <button
+                    type="button"
+                    id="toggleBtn"
+                    onclick="togglePassword()"
+                >Show</button>
+            </div>
+        </div>
+
+        <div class="strength-section">
+
+            <div class="strength-info">
+                <span>Password Strength</span>
+                <span id="strengthText">Not checked</span>
+            </div>
+
+            <div class="progress">
+                <div id="progressBar"></div>
+            </div>
+
+        </div>
+
+        <div class="requirements-section">
+
+            <h3>Password Requirements</h3>
+            <p class="section-description">
+                Your password should meet all five conditions.
+            </p>
+
+            <ul class="requirements">
+                <li id="length">
+                    <span class="status-icon">✕</span>
+                    <span>At least 8 characters</span>
+                </li>
+
+                <li id="uppercase">
+                    <span class="status-icon">✕</span>
+                    <span>One uppercase letter</span>
+                </li>
+
+                <li id="lowercase">
+                    <span class="status-icon">✕</span>
+                    <span>One lowercase letter</span>
+                </li>
+
+                <li id="number">
+                    <span class="status-icon">✕</span>
+                    <span>One number</span>
+                </li>
+
+                <li id="special">
+                    <span class="status-icon">✕</span>
+                    <span>One special character</span>
+                </li>
+            </ul>
+
+        </div>
+
+        <div id="suggestion">
+            <span class="suggestion-icon">💡</span>
+            <span id="suggestionText">
+                Enter a password to check its security.
+            </span>
+        </div>
+
+        <div class="footer">
+            <span class="footer-line"></span>
+            <p>Password Security Checker</p>
+            <span class="footer-line"></span>
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
